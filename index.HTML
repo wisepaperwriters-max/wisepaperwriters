@@ -1,60 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wise Paper Writers | Essays, Research & Digital Solutions</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
-    
-    body { font-family: 'Inter', sans-serif; }
-    .logo-font { font-family: 'Space Grotesk', sans-serif; }
-    
-    .hero-bg {
-      background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.82)), 
-                  url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071') center/cover no-repeat;
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 25px 50px -12px rgb(16 185 129 / 0.25);
-    }
-
-    .pay-card {
-      transition: all 0.3s ease;
-    }
-    .pay-card:hover {
-      transform: translateY(-4px);
-      border-color: rgb(52 211 153);
-    }
-    .pay-card.open {
-      border-color: rgb(52 211 153);
-      background-color: rgb(15 23 42);
-    }
-    .pay-details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, opacity 0.3s ease;
-      opacity: 0;
-    }
-    .pay-card.open .pay-details {
-      max-height: 160px;
-      opacity: 1;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-zinc-950 text-zinc-200">
 
   <!-- Navigation -->
   <nav class="fixed top-0 w-full z-50 bg-zinc-950/95 backdrop-blur-lg border-b border-zinc-800">
     <div class="max-w-screen-2xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
         <span class="text-4xl">✍️</span>
         <div class="logo-font text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">WisePaperWriters</div>
-      </div>
-      
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-3xl text-zinc-200" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
       <div class="hidden md:flex gap-8 text-sm font-medium">
         <a href="#services" class="hover:text-emerald-400 transition">Services</a>
         <a href="#process" class="hover:text-emerald-400 transition">How It Works</a>
@@ -63,8 +30,21 @@
         <a href="#payment" class="hover:text-emerald-400 transition">Payment</a>
       </div>
 
-      <a href="https://wa.me/12073312081" target="_blank" 
-         class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 px-6 py-3 rounded-2xl font-semibold transition">
+      <a href="https://wa.me/12073312081?text=Hello%20WisePaperWriters%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="hidden md:flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 px-6 py-3 rounded-2xl font-semibold transition">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-zinc-950 border-t border-zinc-800 px-6 pb-6">
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#order">Order Now</a>
+      <a href="#payment">Payment</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund.html">Refund Policy</a>
+      <a href="https://wa.me/12073312081?text=Hello%20WisePaperWriters%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="mobile-whatsapp">
         <i class="fab fa-whatsapp"></i> WhatsApp Us
       </a>
     </div>
@@ -75,29 +55,28 @@
     <div class="max-w-screen-2xl mx-auto px-6">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 bg-emerald-900/80 border border-emerald-700 px-6 py-2.5 rounded-3xl text-sm mb-6">
-          <span class="text-emerald-400">🏆</span> Trusted by 500+ Students Worldwide
+          <span class="text-emerald-400">🏆</span> Trusted by Students Worldwide
         </div>
-        
+
         <h1 class="text-6xl md:text-7xl font-bold leading-tight tracking-tighter logo-font mb-6">
           Academic Writing & Digital Solutions Done Right
         </h1>
-        
+
         <p class="text-2xl text-zinc-300 mb-8">
-          Professional, plagiarism-free essays, research papers, proofreading, web design, graphic design and more — delivered on time, every time.
+          Professional essays, research support, proofreading, web design, graphic design and more — delivered on time with clear communication.
         </p>
 
         <div class="flex flex-wrap gap-4">
           <a href="#order" class="px-10 py-5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl font-semibold text-xl hover:scale-105 transition-all">
             Place Your Order Now
           </a>
-          <a href="https://wa.me/12073312081" target="_blank" 
-             class="px-10 py-5 border border-white/40 hover:border-white rounded-3xl font-semibold text-xl transition flex items-center gap-3">
+          <a href="https://wa.me/12073312081?text=Hello%20WisePaperWriters%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="px-10 py-5 border border-white/40 hover:border-white rounded-3xl font-semibold text-xl transition flex items-center gap-3">
             <i class="fab fa-whatsapp text-emerald-400"></i> Chat on WhatsApp
           </a>
         </div>
 
-        <div class="mt-12 flex gap-8 text-sm">
-          <div class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> 100% Original</div>
+        <div class="mt-12 flex flex-wrap gap-8 text-sm">
+          <div class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Original Support</div>
           <div class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> On-Time Delivery</div>
           <div class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Free Revisions</div>
         </div>
@@ -108,10 +87,10 @@
   <!-- Trust Bar -->
   <div class="bg-zinc-900 py-6 border-b border-zinc-800">
     <div class="max-w-screen-2xl mx-auto px-6 flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm">
-      <div>⭐ 4.9/5 • 500+ Happy Students</div>
-      <div class="flex items-center gap-2"><i class="fas fa-file-shield text-emerald-400"></i> Free Plagiarism Report</div>
-      <div class="flex items-center gap-2"><i class="fas fa-robot text-emerald-400"></i> Free AI Detection Report</div>
-      <div>1,200+ Projects Delivered • 98% Satisfaction Rate</div>
+      <div>⭐ Reliable Academic & Digital Project Support</div>
+      <div class="flex items-center gap-2"><i class="fas fa-file-shield text-emerald-400"></i> Plagiarism Report Available</div>
+      <div class="flex items-center gap-2"><i class="fas fa-robot text-emerald-400"></i> AI Report Available</div>
+      <div>Writing • Editing • Design • Web Support</div>
     </div>
   </div>
 
@@ -129,7 +108,7 @@
           <div class="p-8">
             <span class="px-4 py-1 bg-blue-950 text-blue-400 text-xs rounded-2xl">ACADEMIC</span>
             <h3 class="text-2xl font-semibold mt-5">Essay & Assignment Writing</h3>
-            <p class="text-zinc-400 mt-3">Custom essays, coursework, and assignments written to your exact specifications. 100% original.</p>
+            <p class="text-zinc-400 mt-3">Custom essays, coursework, and assignments prepared according to your project instructions.</p>
             <div class="mt-6 text-emerald-400 font-medium">From $7 per page</div>
           </div>
         </div>
@@ -139,7 +118,7 @@
           <div class="p-8">
             <span class="px-4 py-1 bg-violet-950 text-violet-400 text-xs rounded-2xl">ACADEMIC</span>
             <h3 class="text-2xl font-semibold mt-5">Research Papers & Literature Reviews</h3>
-            <p class="text-zinc-400 mt-3">In-depth research papers, literature reviews, and data analysis for all academic levels.</p>
+            <p class="text-zinc-400 mt-3">Research papers, literature reviews, and data-supported academic projects for different levels.</p>
             <div class="mt-6 text-emerald-400 font-medium">From $9 per page</div>
           </div>
         </div>
@@ -149,7 +128,7 @@
           <div class="p-8">
             <span class="px-4 py-1 bg-emerald-950 text-emerald-400 text-xs rounded-2xl">EDITING</span>
             <h3 class="text-2xl font-semibold mt-5">Proofreading & Editing</h3>
-            <p class="text-zinc-400 mt-3">Grammar, structure, tone, and clarity improvements for polished, submission-ready work.</p>
+            <p class="text-zinc-400 mt-3">Grammar, structure, tone, and clarity improvements for polished, submission-ready documents.</p>
             <div class="mt-6 text-emerald-400 font-medium">From $5 per page</div>
           </div>
         </div>
@@ -169,7 +148,7 @@
           <div class="p-8">
             <span class="px-4 py-1 bg-pink-950 text-pink-400 text-xs rounded-2xl">CREATIVE</span>
             <h3 class="text-2xl font-semibold mt-5">Graphic Design & Branding</h3>
-            <p class="text-zinc-400 mt-3">Logos, branding, social media visuals, and marketing materials.</p>
+            <p class="text-zinc-400 mt-3">Logos, branding, social media visuals, flyers, and marketing materials.</p>
             <div class="mt-6 text-emerald-400 font-medium">From $45</div>
           </div>
         </div>
@@ -179,7 +158,7 @@
           <div class="p-8">
             <span class="px-4 py-1 bg-amber-950 text-amber-400 text-xs rounded-2xl">CAREER</span>
             <h3 class="text-2xl font-semibold mt-5">CVs & Cover Letters</h3>
-            <p class="text-zinc-400 mt-3">ATS-optimized CVs and compelling cover letters tailored to your industry.</p>
+            <p class="text-zinc-400 mt-3">ATS-optimized CVs and compelling cover letters tailored to your target role.</p>
             <div class="mt-6 text-emerald-400 font-medium">From $35</div>
           </div>
         </div>
@@ -192,145 +171,82 @@
     <div class="max-w-screen-2xl mx-auto px-6 text-center">
       <span class="uppercase tracking-widest text-emerald-400 font-semibold">Simple Process</span>
       <h2 class="text-5xl font-bold mt-4 mb-16">How It Works</h2>
-      
+
       <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
         <div class="bg-zinc-800/60 p-10 rounded-3xl border border-zinc-700">
-          <div class="w-16 h-16 mx-auto bg-emerald-600 rounded-2xl flex items-center justify-center text-3xl font-bold mb-6">1</div>
+          <div class="step-number">1</div>
           <h4 class="text-xl font-semibold mb-3">Submit Your Order</h4>
-          <p class="text-zinc-400">Fill in the form with your project details, deadline, and any files.</p>
+          <p class="text-zinc-400">Fill in the form with your project details, deadline, and files.</p>
         </div>
         <div class="bg-zinc-800/60 p-10 rounded-3xl border border-zinc-700">
-          <div class="w-16 h-16 mx-auto bg-emerald-600 rounded-2xl flex items-center justify-center text-3xl font-bold mb-6">2</div>
+          <div class="step-number">2</div>
           <h4 class="text-xl font-semibold mb-3">Get a Quote</h4>
-          <p class="text-zinc-400">We review your request and send a fair, transparent price within the hour.</p>
+          <p class="text-zinc-400">Your request is reviewed and a transparent quote is sent back.</p>
         </div>
         <div class="bg-zinc-800/60 p-10 rounded-3xl border border-zinc-700">
-          <div class="w-16 h-16 mx-auto bg-emerald-600 rounded-2xl flex items-center justify-center text-3xl font-bold mb-6">3</div>
-          <h4 class="text-xl font-semibold mb-3">We Get to Work</h4>
-          <p class="text-zinc-400">Your expert starts immediately and keeps you updated at every stage.</p>
+          <div class="step-number">3</div>
+          <h4 class="text-xl font-semibold mb-3">Work Begins</h4>
+          <p class="text-zinc-400">Your project starts after instructions and payment details are confirmed.</p>
         </div>
         <div class="bg-zinc-800/60 p-10 rounded-3xl border border-zinc-700">
-          <div class="w-16 h-16 mx-auto bg-emerald-600 rounded-2xl flex items-center justify-center text-3xl font-bold mb-6">4</div>
-          <h4 class="text-xl font-semibold mb-3">Receive & Approve</h4>
-          <p class="text-zinc-400">Get your completed work with free revisions until you're satisfied.</p>
+          <div class="step-number">4</div>
+          <h4 class="text-xl font-semibold mb-3">Receive & Review</h4>
+          <p class="text-zinc-400">You receive the completed work and request revisions where needed.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials - All 6 Fully Included -->
+  <!-- Testimonials -->
   <section id="testimonials" class="py-24 bg-zinc-950">
     <div class="max-w-screen-2xl mx-auto px-6">
       <div class="text-center mb-16">
-        <span class="uppercase text-emerald-400 font-semibold">Real Client Reviews</span>
+        <span class="uppercase text-emerald-400 font-semibold">Client Feedback</span>
         <h2 class="text-5xl font-bold mt-4">What Our Clients Say</h2>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
-          <p class="text-zinc-300 italic">"I had a 3,000-word literature review due in 48 hours. Wise Paper Writers delivered it 4 hours early — perfectly structured and well-cited. My supervisor praised it as one of the best in the class. Saved my semester!"</p>
-          <div class="mt-8 flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <div class="font-semibold">Sarah Mitchell</div>
-              <div class="text-sm text-zinc-500">Psychology Major, Boston, USA</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
-          <p class="text-zinc-300 italic">"Used them for my MBA dissertation proofreading. The editor was excellent — caught errors I missed after reading it many times. Fast turnaround and very professional communication."</p>
-          <div class="mt-8 flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <div class="font-semibold">James Thornton</div>
-              <div class="text-sm text-zinc-500">MBA Student, London, UK</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
-          <p class="text-zinc-300 italic">"I've used this service three times for different assignments. The quality is consistently outstanding. My grades have noticeably improved since I started working with them."</p>
-          <div class="mt-8 flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <div class="font-semibold">Ahmed Al-Rashid</div>
-              <div class="text-sm text-zinc-500">Business Student, Dubai, UAE</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
-          <p class="text-zinc-300 italic">"They designed a beautiful logo and full brand identity for my bakery. Got it right on the first draft. The warm, cozy feel was exactly what I wanted. Highly recommended!"</p>
-          <div class="mt-8 flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <div class="font-semibold">Claire Ndungu</div>
-              <div class="text-sm text-zinc-500">Small Business Owner, Toronto, Canada</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
-          <p class="text-zinc-300 italic">"Got a full responsive website for my consulting business. It looks professional, loads fast, and has already brought in new clients. Completed in under a week. Excellent value."</p>
-          <div class="mt-8 flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <div class="font-semibold">Rachel Osei</div>
-              <div class="text-sm text-zinc-500">Freelance Consultant, Sydney, Australia</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-          <div class="flex gap-1 text-amber-400 mb-4">★★★★★</div>
-          <p class="text-zinc-300 italic">"Messaged them at 11 PM in panic about a chapter due the next morning. They responded immediately and delivered high-quality original work by 6 AM. Absolute lifesavers!"</p>
-          <div class="mt-8 flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/52.jpg" class="w-12 h-12 rounded-full" alt="">
-            <div>
-              <div class="font-semibold">Tariq Al-Mansouri</div>
-              <div class="text-sm text-zinc-500">Final Year Student, Riyadh, Saudi Arabia</div>
-            </div>
-          </div>
-        </div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Fast delivery, clear writing, and strong structure. The communication was professional from start to finish.”</p><strong>Sarah M.</strong><span>Psychology Student</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>“The proofreading service made my dissertation clearer and more polished. I appreciated the detailed edits.”</p><strong>James T.</strong><span>MBA Student</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Reliable support for assignments and formatting. The final document followed the instructions properly.”</p><strong>Ahmed A.</strong><span>Business Student</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>“They designed a clean flyer and brand concept for my small business. The result looked professional.”</p><strong>Claire N.</strong><span>Business Owner</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>“My consulting landing page looked modern, loaded fast, and helped me present my services better.”</p><strong>Rachel O.</strong><span>Consultant</span></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Quick response and helpful revision support. I would use the service again for urgent projects.”</p><strong>Tariq A.</strong><span>Final Year Student</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Order Form - Fully Automated -->
+  <!-- Order Form -->
   <section id="order" class="py-24 bg-zinc-900">
-    <div class="max-w-2xl mx-auto px-6">
+    <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-5xl font-bold mb-4">Place Your Order</h2>
-        <p class="text-zinc-400 text-lg">Fill the form and receive a quote within 1 hour. Free AI & Plagiarism reports included.</p>
+        <p class="text-zinc-400 text-lg">Fill the form and receive a quote after review. Reports are available on request.</p>
       </div>
 
-      <form action="https://formsubmit.co/wisepaperwriters@gmail.com" method="POST" enctype="multipart/form-data"
-            class="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 space-y-8">
-        
-        <input type="hidden" name="_subject" value="New Order - Wise Paper Writers">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="#order">
+      <form action="https://formsubmit.co/wisepaperwriters@gmail.com" method="POST" enctype="multipart/form-data" class="bg-zinc-950 border border-zinc-800 rounded-3xl p-10 space-y-8">
+        <input type="hidden" name="_subject" value="New Order - Wise Paper Writers" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="thank-you.html" />
 
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm text-zinc-400 mb-2">Your Name</label>
-            <input type="text" name="name" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:border-emerald-500 outline-none">
+            <label>Your Name</label>
+            <input type="text" name="name" required />
           </div>
           <div>
-            <label class="block text-sm text-zinc-400 mb-2">Email Address</label>
-            <input type="email" name="email" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:border-emerald-500 outline-none">
+            <label>Email Address</label>
+            <input type="email" name="email" required />
           </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm text-zinc-400 mb-2">Service Type</label>
-            <select name="service" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:border-emerald-500 outline-none">
+            <label>WhatsApp Number</label>
+            <input type="text" name="whatsapp" placeholder="Include country code" />
+          </div>
+          <div>
+            <label>Service Type</label>
+            <select name="service" required>
               <option value="">Select a service...</option>
               <option>Essay Writing</option>
               <option>Research Paper</option>
@@ -341,21 +257,65 @@
               <option>Other</option>
             </select>
           </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
           <div>
-            <label class="block text-sm text-zinc-400 mb-2">Deadline</label>
-            <input type="text" name="deadline" placeholder="e.g. 3 days / 24 hours" required class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4 focus:border-emerald-500 outline-none">
+            <label>Academic Level</label>
+            <select name="academic_level">
+              <option value="">Select...</option>
+              <option>High School</option>
+              <option>College</option>
+              <option>Bachelor's</option>
+              <option>Master's</option>
+              <option>PhD</option>
+              <option>Not Academic</option>
+            </select>
+          </div>
+          <div>
+            <label>Pages / Words</label>
+            <input type="text" name="pages_words" placeholder="e.g. 5 pages / 1375 words" />
+          </div>
+          <div>
+            <label>Deadline</label>
+            <input type="text" name="deadline" placeholder="e.g. 3 days / 24 hours" required />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label>Citation Style</label>
+            <select name="citation_style">
+              <option value="">Select if applicable...</option>
+              <option>APA</option>
+              <option>MLA</option>
+              <option>Chicago</option>
+              <option>Harvard</option>
+              <option>IEEE</option>
+              <option>Other</option>
+              <option>Not Applicable</option>
+            </select>
+          </div>
+          <div>
+            <label>Report Needed?</label>
+            <select name="report_needed">
+              <option>No report needed</option>
+              <option>Plagiarism report</option>
+              <option>AI report</option>
+              <option>Both plagiarism and AI report</option>
+            </select>
           </div>
         </div>
 
         <div>
-          <label class="block text-sm text-zinc-400 mb-2">Project Details</label>
-          <textarea name="details" rows="7" placeholder="Word count, academic level, citation style, subject, special instructions, topic..." required
-                    class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 focus:border-emerald-500 outline-none"></textarea>
+          <label>Project Details</label>
+          <textarea name="details" rows="7" placeholder="Topic, instructions, rubric, number of sources, formatting needs, and any special notes..." required></textarea>
         </div>
 
         <div>
-          <label class="block text-sm text-zinc-400 mb-2">Attach File (optional)</label>
-          <input type="file" name="attachment" class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-4">
+          <label>Attach Files</label>
+          <input type="file" name="attachments" multiple />
+          <p class="text-xs text-zinc-500 mt-2">You may attach instructions, rubrics, datasets, images, or previous drafts.</p>
         </div>
 
         <button type="submit" class="w-full py-6 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl text-xl font-semibold hover:brightness-110 transition">
@@ -365,59 +325,21 @@
     </div>
   </section>
 
-  <!-- Payment Methods - Logos + Hidden Details -->
+  <!-- Payment Methods -->
   <section id="payment" class="py-24 bg-zinc-950">
     <div class="max-w-screen-2xl mx-auto px-6">
       <div class="text-center mb-12">
         <span class="uppercase text-emerald-400 tracking-widest font-semibold text-sm">Flexible Options</span>
         <h2 class="text-4xl font-bold mt-3">Payment Methods</h2>
-        <p class="text-zinc-400 mt-3">Click on any method to reveal payment details</p>
+        <p class="text-zinc-400 mt-3">Payment details are shared after your quote is confirmed.</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        <!-- M-Pesa -->
-        <div class="pay-card bg-zinc-900 border border-zinc-700 rounded-3xl p-8 text-center cursor-pointer" onclick="toggle(this)">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/M-pesa-logo.png" alt="M-Pesa" class="h-14 mx-auto mb-4 object-contain">
-          <h4 class="font-semibold text-xl mb-1">M-Pesa</h4>
-          <p class="text-zinc-500 text-sm">Kenya</p>
-          <div class="pay-details mt-6">
-            <p class="text-sm text-zinc-400 mb-1">Send to number:</p>
-            <strong class="text-emerald-400 text-lg">0758 292 868</strong>
-          </div>
-        </div>
-
-        <!-- PayPal -->
-        <div class="pay-card bg-zinc-900 border border-zinc-700 rounded-3xl p-8 text-center cursor-pointer" onclick="toggle(this)">
-          <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-150px.png" alt="PayPal" class="h-14 mx-auto mb-4 object-contain">
-          <h4 class="font-semibold text-xl mb-1">PayPal</h4>
-          <div class="pay-details mt-6">
-            <p class="text-sm text-zinc-400 mb-1">Send to email:</p>
-            <strong class="text-emerald-400 text-lg">officialkenwambua@gmail.com</strong>
-          </div>
-        </div>
-
-        <!-- Sendwave -->
-        <div class="pay-card bg-zinc-900 border border-zinc-700 rounded-3xl p-8 text-center cursor-pointer" onclick="toggle(this)">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Sendwave_logo.svg/512px-Sendwave_logo.svg.png" alt="Sendwave" class="h-14 mx-auto mb-4 object-contain">
-          <h4 class="font-semibold text-xl mb-1">Sendwave</h4>
-          <div class="pay-details mt-6">
-            <p class="text-sm text-zinc-400 mb-1">Send to number:</p>
-            <strong class="text-emerald-400 text-lg">0758 292 868</strong>
-          </div>
-        </div>
-
-        <!-- Remitly -->
-        <div class="pay-card bg-zinc-900 border border-zinc-700 rounded-3xl p-8 text-center cursor-pointer" onclick="toggle(this)">
-          <img src="https://seeklogo.com/images/R/remitly-logo-1B8E4E5E0E-seeklogo.com.png" alt="Remitly" class="h-14 mx-auto mb-4 object-contain">
-          <h4 class="font-semibold text-xl mb-1">Remitly</h4>
-          <div class="pay-details mt-6">
-            <p class="text-sm text-zinc-400 mb-1">Send to number:</p>
-            <strong class="text-emerald-400 text-lg">0758 292 868</strong>
-          </div>
-        </div>
+        <div class="pay-card"><i class="fas fa-mobile-screen-button"></i><h4>M-Pesa</h4><p>Kenya</p><span>Details after quote confirmation</span></div>
+        <div class="pay-card"><i class="fab fa-paypal"></i><h4>PayPal</h4><p>International</p><span>Details after quote confirmation</span></div>
+        <div class="pay-card"><i class="fas fa-paper-plane"></i><h4>Sendwave</h4><p>International</p><span>Details after quote confirmation</span></div>
+        <div class="pay-card"><i class="fas fa-money-bill-transfer"></i><h4>Remitly</h4><p>International</p><span>Details after quote confirmation</span></div>
       </div>
-      
-      <p class="text-center text-zinc-500 mt-10 text-sm">💡 Payment details are confirmed after we review your order</p>
     </div>
   </section>
 
@@ -425,12 +347,12 @@
   <section id="contact" class="py-20 bg-zinc-900">
     <div class="max-w-screen-2xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
-      <p class="text-zinc-400 mb-8">Available 24/7 — We usually respond within 1 hour</p>
+      <p class="text-zinc-400 mb-8">Available for academic, writing, design, and web project inquiries.</p>
       <div class="flex flex-col md:flex-row gap-6 justify-center">
-        <a href="mailto:wisepaperwriters@gmail.com" class="bg-zinc-800 hover:bg-zinc-700 px-8 py-4 rounded-2xl flex items-center gap-3">
+        <a href="mailto:wisepaperwriters@gmail.com" class="bg-zinc-800 hover:bg-zinc-700 px-8 py-4 rounded-2xl flex items-center justify-center gap-3">
           <i class="fas fa-envelope"></i> wisepaperwriters@gmail.com
         </a>
-        <a href="https://wa.me/12073312081" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-2xl flex items-center gap-3">
+        <a href="https://wa.me/12073312081?text=Hello%20WisePaperWriters%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-2xl flex items-center justify-center gap-3">
           <i class="fab fa-whatsapp"></i> Chat on WhatsApp
         </a>
       </div>
@@ -440,14 +362,24 @@
   <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
     <div class="logo-font text-2xl mb-2 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">WisePaperWriters</div>
     <p>© 2026 Wise Paper Writers • Professional Academic & Digital Services for Global Clients</p>
+    <div class="mt-4 flex justify-center gap-6">
+      <a href="terms.html" class="hover:text-emerald-400">Terms</a>
+      <a href="privacy.html" class="hover:text-emerald-400">Privacy</a>
+      <a href="refund.html" class="hover:text-emerald-400">Refund Policy</a>
+    </div>
   </footer>
 
   <script>
-    function toggle(card) {
-      const isOpen = card.classList.contains('open');
-      document.querySelectorAll('.pay-card').forEach(c => c.classList.remove('open'));
-      if (!isOpen) card.classList.add('open');
-    }
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
   </script>
 </body>
 </html>
